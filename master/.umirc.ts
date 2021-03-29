@@ -18,6 +18,27 @@ export default defineConfig({
       ],
     },
   },
+  routes: [
+    {
+      path: '/home',
+      component: '@/pages/home/_layout.jsx',
+      routes: [
+        {
+          path: '/home/detail',
+          component: '@/pages/home/detail.jsx',
+        },
+        {
+          path: '/home/list',
+          microApp: 'list'
+        },
+        // 为啥无法渲染？
+        // {
+        //   path: '/home/list',
+        //   component: '@/pages/home/list.jsx'
+        // }
+      ],
+    }
+  ],
   nodeModulesTransform: {
     type: 'none',
   },

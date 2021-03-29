@@ -5,7 +5,7 @@ function User() {
   return (
     <div>
       I am user detail
-      <MicroApp name='detail'></MicroApp>
+      {/* <MicroApp name='detail'></MicroApp> */}
     </div>
   )
 }
