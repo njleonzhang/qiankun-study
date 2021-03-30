@@ -11,10 +11,10 @@ export default defineConfig({
           entry: '//localhost:7001', // html entry
           // activeRule: "/home/list"
         },
-        // {
-        //   name: 'detail', // 唯一 id
-        //   entry: '//localhost:7002', // html entry
-        // },
+        {
+          name: 'introduce', // 唯一 id
+          entry: '//localhost:7002', // html entry
+        },
       ],
     },
   },
@@ -23,13 +23,17 @@ export default defineConfig({
       path: '/home',
       component: '@/pages/home/_layout.jsx',
       routes: [
-        {
-          path: '/home/detail',
-          component: '@/pages/home/detail.jsx',
-        },
+        // {
+        //   path: '/home/detail',
+        //   component: '@/pages/home/detail.jsx',
+        // },
         {
           path: '/home/list',
           microApp: 'list'
+        },
+        {
+          path: '/home/introduce',
+          microApp: 'introduce'
         },
         // 为啥无法渲染？
         // {
